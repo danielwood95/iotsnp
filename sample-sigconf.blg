@@ -1,0 +1,101 @@
+This is BibTeX, Version 0.99d (TeX Live 2015)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: sample-sigconf.aux
+The style file: ACM-Reference-Format.bst
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Database file #1: bibliography.bib
+You're missing a field part---line 56 of file bibliography.bib
+ :   month     = 
+ :               ,
+I'm skipping whatever remains of this entry
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Too many commas in name 1 of "Sell, Rebecca, Rothenberg, Mikel A. and Chapman, Charles F." for entry barrons
+while executing---line 3085 of file ACM-Reference-Format.bst
+Too many commas in name 1 of "Sell, Rebecca, Rothenberg, Mikel A. and Chapman, Charles F." for entry barrons
+while executing---line 3085 of file ACM-Reference-Format.bst
+Too many commas in name 1 of "Sell, Rebecca, Rothenberg, Mikel A. and Chapman, Charles F." for entry barrons
+while executing---line 3085 of file ACM-Reference-Format.bst
+Too many commas in name 1 of "McCallister, Erika, Grance, Tim and Scarfone, Karen" for entry nist
+while executing---line 3085 of file ACM-Reference-Format.bst
+Too many commas in name 1 of "McCallister, Erika, Grance, Tim and Scarfone, Karen" for entry nist
+while executing---line 3085 of file ACM-Reference-Format.bst
+Too many commas in name 1 of "McCallister, Erika, Grance, Tim and Scarfone, Karen" for entry nist
+while executing---line 3085 of file ACM-Reference-Format.bst
+Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
+Reallocated global_strs (elt_size=20001) to 20 items from 10.
+Reallocated glb_str_end (elt_size=4) to 20 items from 10.
+Too many commas in name 1 of "McCallister, Erika, Grance, Tim and Scarfone, Karen" for entry nist
+while executing---line 3146 of file ACM-Reference-Format.bst
+Too many commas in name 1 of "McCallister, Erika, Grance, Tim and Scarfone, Karen" for entry nist
+while executing---line 3146 of file ACM-Reference-Format.bst
+Too many commas in name 1 of "Sell, Rebecca, Rothenberg, Mikel A. and Chapman, Charles F." for entry barrons
+while executing---line 3146 of file ACM-Reference-Format.bst
+Too many commas in name 1 of "Sell, Rebecca, Rothenberg, Mikel A. and Chapman, Charles F." for entry barrons
+while executing---line 3146 of file ACM-Reference-Format.bst
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Warning--empty publisher in apthorpeIoT
+Warning--empty address in apthorpeIoT
+Warning--page numbers missing in both pages and numpages fields in apthorpeIoT
+Warning--empty address in chaMachineLearning
+Warning--empty publisher in ftc
+Warning--empty address in ftc
+Warning--page numbers missing in both pages and numpages fields in ftc
+Warning--empty booktitle in coposIoT
+Warning--empty publisher in coposIoT
+Warning--empty address in coposIoT
+Too many commas in name 1 of "McCallister, Erika, Grance, Tim and Scarfone, Karen" for entry nist
+while executing---line 3244 of file ACM-Reference-Format.bst
+Too many commas in name 1 of "McCallister, Erika, Grance, Tim and Scarfone, Karen" for entry nist
+while executing---line 3244 of file ACM-Reference-Format.bst
+Too many commas in name 1 of "McCallister, Erika, Grance, Tim and Scarfone, Karen" for entry nist
+while executing---line 3244 of file ACM-Reference-Format.bst
+Too many commas in name 1 of "Sell, Rebecca, Rothenberg, Mikel A. and Chapman, Charles F." for entry barrons
+while executing---line 3244 of file ACM-Reference-Format.bst
+Too many commas in name 1 of "Sell, Rebecca, Rothenberg, Mikel A. and Chapman, Charles F." for entry barrons
+while executing---line 3244 of file ACM-Reference-Format.bst
+Too many commas in name 1 of "Sell, Rebecca, Rothenberg, Mikel A. and Chapman, Charles F." for entry barrons
+while executing---line 3244 of file ACM-Reference-Format.bst
+Warning--empty address in barrons
+You've used 13 entries,
+            5795 wiz_defined-function locations,
+            1394 strings with 17379 characters,
+and the built_in function-call counts, 14854 in all, are:
+= -- 1801
+> -- 347
+< -- 0
++ -- 107
+- -- 341
+* -- 962
+:= -- 1499
+add.period$ -- 68
+call.type$ -- 13
+change.case$ -- 70
+chr.to.int$ -- 12
+cite$ -- 24
+duplicate$ -- 1181
+empty$ -- 839
+format.name$ -- 161
+if$ -- 3226
+int.to.chr$ -- 3
+int.to.str$ -- 1
+missing$ -- 32
+newline$ -- 149
+num.names$ -- 103
+pop$ -- 449
+preamble$ -- 1
+purify$ -- 185
+quote$ -- 0
+skip$ -- 426
+stack$ -- 0
+substring$ -- 1642
+swap$ -- 92
+text.length$ -- 401
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 326
+warning$ -- 11
+while$ -- 112
+width$ -- 0
+write$ -- 270
+(There were 17 error messages)

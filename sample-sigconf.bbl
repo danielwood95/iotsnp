@@ -1,0 +1,189 @@
+%%% -*-BibTeX-*-
+%%% Do NOT edit. File created by BibTeX with style
+%%% ACM-Reference-Format-Journals [18-Jan-2012].
+
+\begin{thebibliography}{13}
+
+%%% ====================================================================
+%%% NOTE TO THE USER: you can override these defaults by providing
+%%% customized versions of any of these macros before the \bibliography
+%%% command.  Each of them MUST provide its own final punctuation,
+%%% except for \shownote{}, \showDOI{}, and \showURL{}.  The latter two
+%%% do not use final punctuation, in order to avoid confusing it with
+%%% the Web address.
+%%%
+%%% To suppress output of a particular field, define its macro to expand
+%%% to an empty string, or better, \unskip, like this:
+%%%
+%%% \newcommand{\showDOI}[1]{\unskip}   % LaTeX syntax
+%%%
+%%% \def \showDOI #1{\unskip}           % plain TeX syntax
+%%%
+%%% ====================================================================
+
+\ifx \showCODEN    \undefined \def \showCODEN     #1{\unskip}     \fi
+\ifx \showDOI      \undefined \def \showDOI       #1{#1}\fi
+\ifx \showISBNx    \undefined \def \showISBNx     #1{\unskip}     \fi
+\ifx \showISBNxiii \undefined \def \showISBNxiii  #1{\unskip}     \fi
+\ifx \showISSN     \undefined \def \showISSN      #1{\unskip}     \fi
+\ifx \showLCCN     \undefined \def \showLCCN      #1{\unskip}     \fi
+\ifx \shownote     \undefined \def \shownote      #1{#1}          \fi
+\ifx \showarticletitle \undefined \def \showarticletitle #1{#1}   \fi
+\ifx \showURL      \undefined \def \showURL       {\relax}        \fi
+% The following commands are used for tagged output and should be
+% invisible to TeX
+\providecommand\bibfield[2]{#2}
+\providecommand\bibinfo[2]{#2}
+\providecommand\natexlab[1]{#1}
+\providecommand\showeprint[2][]{arXiv:#2}
+
+\bibitem[\protect\citeauthoryear{Apthorpe}{Apthorpe}{2016}]%
+        {apthorpeIoT}
+\bibfield{author}{\bibinfo{person}{Noah Apthorpe}.}
+  \bibinfo{year}{2016}\natexlab{}.
+\newblock \showarticletitle{A Smart Home is No Castle: Privacy Vulnerabilities
+  of Encrypted IoT Traffic}. In \bibinfo{booktitle}{{\em Workshop on Data and
+  Algorithmic Transparency}}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Bureau}{Bureau}{2003}]%
+        {names}
+\bibfield{author}{\bibinfo{person}{United States~Census Bureau}.}
+  \bibinfo{year}{2003}\natexlab{}.
+\newblock \bibinfo{title}{Frequently Occurring Surnames from the Census 2000}.
+\newblock   (\bibinfo{year}{2003}).
+\newblock
+\showURL{%
+\url{https://www.census.gov/topics/population/genealogy/data/2000_surnames.html}}
+
+
+\bibitem[\protect\citeauthoryear{Cha and Kim}{Cha and Kim}{2017}]%
+        {chaMachineLearning}
+\bibfield{author}{\bibinfo{person}{Seunghun Cha} {and}
+  \bibinfo{person}{Hyoungshick Kim}.} \bibinfo{year}{2017}\natexlab{}.
+\newblock \bibinfo{booktitle}{{\em Detecting encrypted traffic: a machine
+  learning approach}}. Vol.~\bibinfo{volume}{10144}.
+\newblock \bibinfo{publisher}{Springer, Cham}.
+\newblock
+\showISBNx{9783319565484}
+\newblock
+\shownote{Inofrmation Security Applications.}
+
+
+\bibitem[\protect\citeauthoryear{Commission}{Commission}{2016}]%
+        {ftc}
+\bibfield{author}{\bibinfo{person}{Federal~Trade Commission}.}
+  \bibinfo{year}{2016}\natexlab{}.
+\newblock \showarticletitle{Internet of Things: Privacy \& Security in a
+  Connected World}. In \bibinfo{booktitle}{{\em FTC Staff Report}}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Copos}{Copos}{1993}]%
+        {coposIoT}
+\bibfield{author}{\bibinfo{person}{Bogdan et~al Copos}.}
+  \bibinfo{year}{1993}\natexlab{}.
+\newblock \showarticletitle{Is Anybody Home? Inferring Activity From Smart Home
+  Network Traffic} {\em (\bibinfo{series}{5})}, Vol.~\bibinfo{volume}{4}.
+  \bibinfo{pages}{213}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Dimitrov}{Dimitrov}{2016}]%
+        {dimitrovIoT}
+\bibfield{author}{\bibinfo{person}{Dimiter Dimitrov}.}
+  \bibinfo{year}{2016}\natexlab{}.
+\newblock \showarticletitle{Medical Internet of Things and Big Data in
+  Healthcare}.
+\newblock \bibinfo{journal}{{\em Healthc Inform Res\/}} \bibinfo{volume}{3},
+  \bibinfo{number}{22} (\bibinfo{date}{7} \bibinfo{year}{2016}),
+  \bibinfo{pages}{156--163}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Feamster}{Feamster}{2016}]%
+        {tinker}
+\bibfield{author}{\bibinfo{person}{Nick Feamster}.}
+  \bibinfo{year}{2016}\natexlab{}.
+\newblock \bibinfo{title}{Who Will Secure the Internet of Things?}
+\newblock
+  \bibinfo{howpublished}{https://freedom-to-tinker.com/2016/01/19/who-will-secure-the-internet-of-things/}.
+    (\bibinfo{year}{2016}).
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{McCallister and Scarfone}{McCallister and
+  Scarfone}{2010}]%
+        {nist}
+\bibfield{author}{\bibinfo{person}{Grance~Tim McCallister, Erika} {and}
+  \bibinfo{person}{Karen Scarfone}.} \bibinfo{year}{2010}\natexlab{}.
+\newblock \showarticletitle{Guide to Protecting the Confidentiality of
+  Personally Identifiable Information (PII)}.
+\newblock \bibinfo{journal}{{\em Special Publication\/}} \bibinfo{volume}{122},
+  \bibinfo{number}{800} (\bibinfo{date}{4} \bibinfo{year}{2010}),
+  \bibinfo{pages}{2}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Mosley}{Mosley}{2017}]%
+        {cra}
+\bibfield{author}{\bibinfo{person}{Brian Mosley}.}
+  \bibinfo{year}{2017}\natexlab{}.
+\newblock \bibinfo{title}{NSF Funded IoT Security Research Excites at the 2017
+  CNSF Exhibition}.
+\newblock
+  \bibinfo{howpublished}{http://cra.org/govaffairs/blog/2017/05/2017-cnsf-exhibition/}.
+    (\bibinfo{year}{2017}).
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{of~Health and for Civil~Rights}{of~Health and
+  for Civil~Rights}{nda}]%
+        {privacyHIPAArule}
+\bibfield{author}{\bibinfo{person}{United States~Department of Health} {and}
+  \bibinfo{person}{Human Services~Office for Civil~Rights}.}
+  \bibinfo{year}{n.d.}\natexlab{a}.
+\newblock \bibinfo{title}{Summary of the HIPAA Privacy Rule}.
+\newblock   (\bibinfo{year}{n.d.}).
+\newblock
+\showURL{%
+\url{https://www.hhs.gov/hipaa/for-professionals/privacy/index.html}}
+
+
+\bibitem[\protect\citeauthoryear{of~Health and for Civil~Rights}{of~Health and
+  for Civil~Rights}{ndb}]%
+        {securityHIPAArule}
+\bibfield{author}{\bibinfo{person}{United States~Department of Health} {and}
+  \bibinfo{person}{Human Services~Office for Civil~Rights}.}
+  \bibinfo{year}{n.d.}\natexlab{b}.
+\newblock \bibinfo{title}{Summary of the HIPAA Security Rule}.
+\newblock   (\bibinfo{year}{n.d.}).
+\newblock
+\showURL{%
+\url{https://www.hhs.gov/hipaa/for-professionals/security/index.html}}
+
+
+\bibitem[\protect\citeauthoryear{Sell and Chapman}{Sell and Chapman}{2012}]%
+        {barrons}
+\bibfield{author}{\bibinfo{person}{Rothenberg Mikel~A. Sell, Rebecca} {and}
+  \bibinfo{person}{Charles~F. Chapman}.} \bibinfo{year}{2012}\natexlab{}.
+\newblock \bibinfo{booktitle}{{\em Dictionary of Medical Terms}}.
+  Vol.~\bibinfo{volume}{6}.
+\newblock \bibinfo{publisher}{Barron's Educational Series}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Srinivasan}{Srinivasan}{2008}]%
+        {srinivasan2008fats}
+\bibfield{author}{\bibinfo{person}{Vijay et~al Srinivasan}.}
+  \bibinfo{year}{2008}\natexlab{}.
+\newblock \showarticletitle{Protecting your daily in-home activity information
+  from a wireless snooping attack}. In \bibinfo{booktitle}{{\em Proceedings of
+  the 10th international conference on Ubiquitous computing}}.
+  \bibinfo{publisher}{ACM}, \bibinfo{address}{New York},
+  \bibinfo{pages}{202--211}.
+\newblock
+
+
+\end{thebibliography}
