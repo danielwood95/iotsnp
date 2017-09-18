@@ -80,13 +80,13 @@
 \newblock
 
 
-\bibitem[\protect\citeauthoryear{Copos}{Copos}{1993}]%
+\bibitem[\protect\citeauthoryear{Copos}{Copos}{2016}]%
         {coposIoT}
 \bibfield{author}{\bibinfo{person}{Bogdan et~al Copos}.}
-  \bibinfo{year}{1993}\natexlab{}.
+  \bibinfo{year}{2016}\natexlab{}.
 \newblock \showarticletitle{Is Anybody Home? Inferring Activity From Smart Home
-  Network Traffic} {\em (\bibinfo{series}{5})}, Vol.~\bibinfo{volume}{4}.
-  \bibinfo{pages}{213}.
+  Network Traffic}. In \bibinfo{booktitle}{{\em IEEE Security and Privacy
+  Workshops}}.
 \newblock
 
 

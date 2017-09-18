@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  15 SEP 2017 15:14
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  17 SEP 2017 20:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -906,16 +906,16 @@ Package caption Info: End \AtBeginDocument code.
 
 Excluding 'CCSXML' comment.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 17.28pt on input line 116.
+(Font)              scaled to size 17.28pt on input line 117.
 LaTeX Font Info:    Try loading font information for T1+LinuxBiolinumT-TLF on i
-nput line 116.
+nput line 117.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/libertine/T1LinuxBiolinumT-TLF.fd
 File: T1LinuxBiolinumT-TLF.fd 2012/11/26 (autoinst) Font definitions for T1/Lin
 uxBiolinumT-TLF.
 )
 LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/m/n' will be
-(Font)              scaled to size 17.28pt on input line 116.
+(Font)              scaled to size 17.28pt on input line 117.
 Package microtype Info: Loading generic settings for font family
 (microtype)             `LinuxBiolinumT-TLF' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
@@ -923,15 +923,15 @@ Package microtype Info: Loading generic settings for font family
 LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/bx/n' in size <17.28> not
  available
 (Font)              Font shape `T1/LinuxBiolinumT-TLF/b/n' tried instead on inp
-ut line 116.
+ut line 117.
 LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/b/n' will be
-(Font)              scaled to size 17.28pt on input line 116.
+(Font)              scaled to size 17.28pt on input line 117.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 12.0pt on input line 116.
+(Font)              scaled to size 12.0pt on input line 117.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 10.0pt on input line 116.
+(Font)              scaled to size 10.0pt on input line 117.
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 10.0pt on input line 116.
+(Font)              scaled to size 10.0pt on input line 117.
 Package microtype Info: Loading generic settings for font family
 (microtype)             `LinuxLibertineT-TLF' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
@@ -943,9 +943,9 @@ File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/it' will be
-(Font)              scaled to size 7.0pt on input line 116.
+(Font)              scaled to size 7.0pt on input line 117.
 LaTeX Font Info:    Try loading font information for TS1+LinuxLibertineT-TLF on
- input line 116.
+ input line 117.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/libertine/TS1LinuxLibertineT-TLF.
 fd
@@ -953,29 +953,29 @@ File: TS1LinuxLibertineT-TLF.fd 2012/11/26 (autoinst) Font definitions for TS1/
 LinuxLibertineT-TLF.
 )
 LaTeX Font Info:    Font shape `TS1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 7.0pt on input line 116.
+(Font)              scaled to size 7.0pt on input line 117.
 Package microtype Info: Loading generic settings for font family
 (microtype)             `LinuxLibertineT-TLF' (encoding: TS1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/n' will be
-(Font)              scaled to size 9.0pt on input line 116.
+(Font)              scaled to size 9.0pt on input line 117.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/n' will be
-(Font)              scaled to size 10.95pt on input line 116.
+(Font)              scaled to size 10.95pt on input line 117.
 LaTeX Font Info:    Font shape `TS1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 9.0pt on input line 116.
+(Font)              scaled to size 9.0pt on input line 117.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/it' will be
-(Font)              scaled to size 9.0pt on input line 116.
+(Font)              scaled to size 9.0pt on input line 117.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 8.0pt on input line 116.
+(Font)              scaled to size 8.0pt on input line 117.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/n' will be
-(Font)              scaled to size 8.0pt on input line 116.
+(Font)              scaled to size 8.0pt on input line 117.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/it' will be
-(Font)              scaled to size 8.0pt on input line 116.
+(Font)              scaled to size 8.0pt on input line 117.
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 8.0pt on input line 116.
+(Font)              scaled to size 8.0pt on input line 117.
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 6.2pt on input line 116.
+(Font)              scaled to size 6.2pt on input line 117.
  (./body.tex [1.1{/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdf
 tex.map}
 
@@ -1040,7 +1040,7 @@ File: bloodpressure.png Graphic file (type png)
 
 <use bloodpressure.png>
 Package pdftex.def Info: bloodpressure.png used on input line 306.
-(pdftex.def)             Requested size: 134.23148pt x 69.4766pt.
+(pdftex.def)             Requested size: 172.57916pt x 89.32489pt.
  <bloodpacket2.png, id=160, 955.57pt x 405.515pt>
 File: bloodpacket2.png Graphic file (type png)
 
@@ -1057,25 +1057,25 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `\\' on input line 322.
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 2698) has occurred while \output is active []
 
  [5.5 <./bloodpressure.png> <./bloodpacket2.png>]) (./sample-sigconf.bbl) [6.6
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 123.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 123.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 124.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 124.
 
 (./sample-sigconf.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 123.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 123.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 124.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 124.
 Package rerunfilecheck Info: File `sample-sigconf.out' has not changed.
-(rerunfilecheck)             Checksum: 8374A1F898B2FE21E7E72246B52789FE;2342.
+(rerunfilecheck)             Checksum: 842F4292A6851A285832AAC3A5FF51E7;2342.
  ) 
 Here is how much of TeX's memory you used:
- 17785 strings out of 493089
- 269604 string characters out of 6134842
+ 17784 strings out of 493089
+ 269588 string characters out of 6134842
  381117 words of memory out of 5000000
- 20391 multiletter control sequences out of 15000+600000
+ 20390 multiletter control sequences out of 15000+600000
  156062 words of font info for 327 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
  60i,11n,94p,1023b,466s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1102,7 +1102,7 @@ r/local/texlive/2015/texmf-dist/fonts/type1/public/txfonts/txex.pfb></usr/local
 /texlive/2015/texmf-dist/fonts/type1/public/txfonts/txsy.pfb></usr/local/texliv
 e/2015/texmf-dist/fonts/type1/public/newtx/zxlr.pfb></usr/local/texlive/2015/te
 xmf-dist/fonts/type1/public/newtx/zxlri.pfb>
-Output written on sample-sigconf.pdf (6 pages, 2202345 bytes).
+Output written on sample-sigconf.pdf (6 pages, 2202324 bytes).
 PDF statistics:
  268 PDF objects out of 1000 (max. 8388607)
  214 compressed objects within 3 object streams
