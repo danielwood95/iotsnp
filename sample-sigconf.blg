@@ -5,10 +5,6 @@ The style file: ACM-Reference-Format.bst
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Database file #1: bibliography.bib
-You're missing a field part---line 53 of file bibliography.bib
- :   month     = 
- :               ,
-I'm skipping whatever remains of this entry
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Too many commas in name 1 of "Sell, Rebecca, Rothenberg, Mikel A. and Chapman, Charles F." for entry barrons
 while executing---line 3085 of file ACM-Reference-Format.bst
@@ -59,14 +55,14 @@ while executing---line 3244 of file ACM-Reference-Format.bst
 Warning--empty address in barrons
 You've used 13 entries,
             5795 wiz_defined-function locations,
-            1392 strings with 17406 characters,
-and the built_in function-call counts, 14762 in all, are:
-= -- 1783
+            1393 strings with 17419 characters,
+and the built_in function-call counts, 14767 in all, are:
+= -- 1784
 > -- 347
 < -- 0
 + -- 107
 - -- 341
-* -- 957
+* -- 959
 := -- 1491
 add.period$ -- 67
 call.type$ -- 13
@@ -80,15 +76,15 @@ if$ -- 3200
 int.to.chr$ -- 3
 int.to.str$ -- 1
 missing$ -- 32
-newline$ -- 149
+newline$ -- 150
 num.names$ -- 103
-pop$ -- 451
+pop$ -- 450
 preamble$ -- 1
 purify$ -- 185
 quote$ -- 0
 skip$ -- 418
 stack$ -- 0
-substring$ -- 1631
+substring$ -- 1632
 swap$ -- 87
 text.length$ -- 401
 text.prefix$ -- 0
@@ -97,5 +93,5 @@ type$ -- 326
 warning$ -- 11
 while$ -- 111
 width$ -- 0
-write$ -- 268
-(There were 17 error messages)
+write$ -- 269
+(There were 16 error messages)
