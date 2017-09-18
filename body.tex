@@ -37,7 +37,7 @@ user interactions~\cite{apthorpeIoT}.
 This paper examines whether in the course of regular behavior, today's
 commercially available smart medical devices properly protect all individually
 identifiable health information as dictated by HIPAA.  We evaluate a suite of
-medical IoT devices, including: (1)~the Withings Smart Blood Pressure Monitor,
+medical IoT devices, including: (1)~Withings Smart Blood Pressure Monitor,
 (2)~Withings Smart Scale, (3)~iHealth Ease Wireless Blood Pressure Monitor, and (4)~1byOne
 Digital Smart Wireless Scale, all of which are popular and readily available
 on Amazon. We record and analyze network traffic from these devices and
@@ -115,7 +115,7 @@ capabilities could exploit. However, most of the literature uses data
 collected from generic home devices, not medical IoT devices. For example, Srinivasan et al. present a new privacy
 leak in residential wireless ubiquitous computing systems: the Fingerprint and
 Timing-based Snooping (FATS) attack~\cite{srinivasan2008fats}.
-This attack allows a WiFi eavesdropper to
+This attack allows a Wi-Fi eavesdropper to
 observe private activities in the home such as cooking, showering, toileting,
 and sleeping by snooping on the wireless transmissions of sensors in a home
 and leveraging tiered inference algorithms.
@@ -149,7 +149,7 @@ We analyzed medical IoT device network traffic for privacy vulnerabilities using
 
 \subsection{Data Collection}
 
-We created an isolated test environment where we could connect various medical IoT devices to a network and capture live traffic. We configured a Raspberry Pi 3 as a Wi-Fi access point (AP) and programmed it to record traffic to and from connected Wi-Fi stations (Figure~\ref{fig:data-collection}). The open source code can be examined at $github.com/danielwood95/IoTSecurityHub$.  Creating an isolated test environment was necessary because it enabled us to easily separate traffic by device and filter out extraneous traffic on the network.   We chose four mIoT devices to inspect:
+We created an isolated test environment where we could connect various medical IoT devices to a network and capture live traffic. We configured a Raspberry Pi 3 as a Wi-Fi access point (AP) and programmed it to record traffic to and from connected Wi-Fi stations (Figure~\ref{fig:data-collection}). The open source code can be examined at {\tt github.com/danielwood95/IoTSecurityHub}.  Creating an isolated test environment was necessary because it enabled us to easily separate traffic by device and filter out extraneous traffic on the network.   We chose four medical IoT devices to inspect:
 
 \begin{enumerate}
   \item Withings Wireless Blood Pressure Monitor
@@ -170,11 +170,12 @@ We connected the Wi-Fi-enabled devices directly to the Raspberry Pi AP and the B
 We purposefully chose two smart scales and two blood pressure monitors so that we could compare the way in which different device manufacturers transmit application data and determine which company had better security or privacy practices, if any. 
 
 We used Wireshark to capture all Ethernet traffic traversing the access point, divided these data using MAC addresses into streams of packets corresponding to each IoT device, and saved the packets in PCAP files for offline analysis. 
- When generating the dataset, we captured as many use cases of each device as possible, including user registration and sign-up, downloading patches and updates, vitals measurements, and health analytics. It is important not to ignore the use cases beyond general vitals measurement, because some of the most valuable information obtainable by an adversary would be a patch because it could reveal information about the way the embedded system in the device is designed. 
+ When generating the dataset, we captured as many use cases of each device as possible, including user registration and sign-up, downloading patches and updates, vitals measurements, and health analytics. It is important not to ignore the use cases beyond general vitals measurement.  A malicious adversary could, for example, learn valuable information about the design of a device's embedded system by intercepting a software patch. 
+ %Software patches because some of the most valuable information obtainable by an adversary would be a patch because it could reveal information about the way the embedded system in the device is designed. 
 
 \subsection{Cleartext Identification}
 
-We next analyzed captured packet streams from our medical IoT devices for unencrypted health information. We started by separating the packets by protocol, focusing mainly on HTTP and TCP packets and ignoring packets sent with SSL or TLS, as those are encrypted. Next we separated the payload, which contains application data, from the header of each packet for further analysis. Even though HTTP and TCP are unencrypted, it was still necessary to eliminate payloads containing encrypted application-level data so we could concentrate our analysis on unencrypted application-level data. We experimented with three different schemes for this classification: naive ASCII approach, Shannon entropy test, and chi squared test. The latter two are approaches tested by Cha et al. ~\cite{chaMachineLearning}.
+We next analyzed captured packet streams from our medical IoT devices for unencrypted health information. We started by separating the packets by protocol, focusing mainly on HTTP and TCP packets and ignoring packets sent with SSL or TLS, as those are encrypted. Next we separated the payload, which contains application data, from the header of each packet for further analysis. Even though HTTP and TCP are unencrypted, it was still necessary to eliminate payloads containing encrypted application-layer data so we could concentrate our analysis on unencrypted application-layer data. We experimented with three different schemes for this classification: naive ASCII approach, Shannon entropy test, and chi squared test. The latter two are approaches tested by Cha et al. ~\cite{chaMachineLearning}.
 
 \subsubsection{Naive ASCII approach}
 %The first approach used to determine whether a packet was cleartext or encrypted was the naive ASCII approach. 
@@ -183,23 +184,23 @@ If all the characters in the payload are contained within the 128 character ASCI
 \subsubsection{Shannon Entropy Test}
 %The next approach used determine whether or not a packet was encrypted was the Shannon Entropy Test. 
 The Shannon Entropy Test calculates the entropy of each payload string, which is a quantitative measure of the variability in the frequency of the different possible characters. While random (or in this case, encrypted) strings have very high entropy, unencrypted cleartext and English strings exhibit fairly low entropy. To calculate the Shannon Entropy of a string, let $X$ be a random variable that takes on possible values $x_1$, $x_2$, ..., $x_n$. $p(x_i)$ is the probability that $X = x_i$:
-$$H(X) = - \sum_{i = 1}^{n} p(x_i) log p(x_i)$$
+$$H(X) = - \sum_{i = 1}^{n} p(x_i) \log p(x_i)$$
 A packet's payload is presumed to be unencrypted if its Shannon entropy value is lower than a threshold parameter. For our analysis, we used a relatively high threshold parameter of $7.5$, so as not to discard some unencrypted payloads with high entropy (at the cost of misidentifying a small number of encrypted payloads with low entropy).
 
 \subsubsection{Chi-Squared Test}
-Lastly, the Chi-Squared test compares the frequency of each character with its expected value from a uniform distribution. The value $\chi^2$ is calculated according to the formula:
+Lastly, the Chi-Squared test compares the observed frequency of each character, $o_i$, with its expected value from a uniform distribution, $e_i$. The value $\chi^2$ is calculated according to the formula:
 $$\chi^2 = \sum_{i=1}^{n} \frac{(o_i-e_i)^2}{e_i}$$
 The more a set of frequencies deviates from its expected values, the higher the value of $\chi^2$, and if the observed frequencies equal the expected frequencies then $\chi^2$ is 0. Therefore, English cleartext is expected to have a much higher deviation of character frequencies from the expected frequency (a uniformly random distribution). By setting the threshold value $\chi^2 = 1000$, we were able to effectively weed out the unencrypted payloads from those that were encrypted. 
 
 \subsubsection{Method Comparison}
 
 To determine which of the three methods (naive ASCII, Shannon Entropy, or Chi-Squared)
-yielded the most accurate classification of unencrypted packets, we ran a comparative analysis with five PCAP files with over 225,000 packets (Figure~\ref{fig:method-comp}). Out of the three methods, the naive ASCII approach was the most selective. It had a 0 percent false positive rate, but missed nearly all of the unencrypted packets, because many of the payloads contained some number extended ASCII characters. 
+yielded the most accurate classification of unencrypted packets, we ran a comparative analysis with five PCAP files with over 225,000 packets (Figure~\ref{fig:method-comp}). Out of the three methods, the naive ASCII approach was the most selective. It had a 0 percent false positive rate, but missed nearly all of the unencrypted packets, because many of the payloads contained some number of extended ASCII characters. 
 
-In contrast, the Shannon Entropy approach cast a much wider net, tagging a much larger share of packets as being unencrypted, though this approach suffered from a high false positive rate. Lowering the threshold entropy value did not significantly increase the accuracy of the approach, as fewer true unencrypted packets were identified as the threshold entropy value decreased. 
+In contrast, the Shannon Entropy approach cast a much wider net, tagging a larger share of packets as being unencrypted, but suffered from a high false positive rate. Lowering the threshold entropy value did not significantly increase the accuracy of the approach, as fewer true unencrypted packets were identified as the threshold entropy value decreased. 
 
 We found the most accurate encryption classification approach to be the Chi-Squared
-test, due to its low false positive rate and identification of non-random string patterns within the packet payloads we tested. The Chi-Squared test exhibited a false positive rate of approximately 3.5\%, while still identifying nearly all the other unencrypted payloads as the naive ASCII and Shannon entropy approaches.
+test, due to its low false positive rate and identification of non-random string patterns within the packet payloads we tested. The Chi-Squared test exhibited a false positive rate of approximately 3.5\%, while still identifying nearly all unencrypted payloads detected by the the naive ASCII and Shannon entropy approaches.
 
 
 \begin{figure}
@@ -211,7 +212,7 @@ test, due to its low false positive rate and identification of non-random string
     Shannon Entropy &  $0.26$ & $16.2$ \\
     Chi Square & $.97$ & $4.9$ \\
     \end{tabular}
-    \caption{Comparison of cleartext detection approaches on 225,000 packet payloads from the devices studied. The precision metric indicates the probability that a particular approach correctly identifies a payload as cleartext. Column 3 indicates what percent of total packets were identified as cleartext. Less selective approaches identify more cleartext packets, but also result in higher false positive rates.}
+    \caption{Comparison of cleartext detection approaches on 225,000 packet payloads from the devices studied. The precision metric indicates the probability that a particular approach correctly identifies a payload as cleartext. Column~3 indicates what percent of total packets were identified as cleartext. Less selective approaches identify more cleartext packets, but also result in higher false positive rates.}
     \label{fig:method-comp}
   \end{center}
 \end{figure}
@@ -221,16 +222,16 @@ Once we were able to identify cleartext packets, we identified potentially sensi
 
 \subsection{Metadata Analysis}
 
-In cases when devices encrypted application-level data or utilized secure
+In cases when devices encrypted application-layer data or utilized secure
 protocols such as TLS or SSL, we were still able to infer rough user behavior
-during traffic collection due to the fact that the devices studied are only
-used to make periodic measurements and are not always on. For example, blood
+during traffic collection due to the fact that the studied devices are typically used to make
+periodic measurements and are not always on. For example, blood
 sugar may be measured at regular intervals throughout the day (such as after a
 meal) and smart scales might be used once every morning. Using Wireshark, we
 were able to associate periods of device activity based on time stamps and
-origin IP addresses, thereby keeping track of each device reading. In some
-cases, we were able to determine what the user's behavior during that
-period of activity by examining the descriptions of the destination IP
+origin IP addresses. In some
+cases, we were able to determine the user's behavior during these
+periods of activity by examining the descriptions of the destination IP
 addresses in Wireshark. For example, the Withings Smart Scale always
 communicates with {\tt scalews.withings.net} when transmitting data
 about a current measurement, making all outgoing traffic easily identifiable.
@@ -272,10 +273,9 @@ destinations, unlike the Withings devices.
 The Withings Blood Pressure Monitor, out of the four devices monitored,
 exhibited the most vulnerabilities concerning sensitive user information
 during data transmission. We were able to capture enough sensitive second-
-order data and metadata from a stream of traffic from the device in the course
-of typical usage to determine that the user of the device was measuring his or
-her blood pressure, and how frequently the user was taking these measurements as
-well.
+order data and metadata from network traffic in the course
+of typical device use to determine that the user was measuring his or
+her blood pressure and how frequently the user was taking these measurements.
 
 First of all, it is easy for a network observer to detect that a Withings IoT
 device is in use, because the information sections of all queries and
@@ -304,7 +304,7 @@ use.
 \begin{figure}[t]
   \centering
     \fbox{\includegraphics[scale=0.45]{bloodpressure}}
-     \caption{During data collection phase, the Withings Blood Pressure Monitor sent this actual image in the clear through a GET request, which reveals the nature of the device traffic.}
+     \caption{During data collection phase, the Withings Blood Pressure Monitor sent this image in the clear through a GET request, which reveals the nature of the device traffic.}
      \label{fig:bp-image}
 \end{figure}
 
@@ -315,7 +315,7 @@ use.
   \label{fig:bp-packet}
 \end{figure}
 
-Figure 5 highlights the example of one packet alone, which revealed four sources
+Figure 5 highlights the example of one packet, which alone revealed four sources
 of potentially sensitive information about the device. The cleartext string ``blood\textunderscore
 pressure'' appears twice, along with the string ``withings\textunderscore mobile\textunderscore app=ios\textunderscore healthmate''. Lastly, the ``current\textunderscore user'' field, while not directly disclosing the name of user, is potentially a unique identifier that associates that user with the subsequent blood pressure data. By monitoring this traffic for a period of time with many users, it would be trivial to match each packet of transmitted application data to the associated user. 
 
@@ -337,7 +337,7 @@ When we ran the deep packet analysis of the traffic, it was not
 possible to compile information about the user's behavior in the same way as
 with the blood pressure monitor. This suggests that it is relatively easy for
 device manufacturers to protect patient information by encrypting
-application level data and using secure protocols such as TLS or SSL to
+application-layer data and using secure protocols such as TLS or SSL to
 transmit application data.
 
 
@@ -351,23 +351,23 @@ transmit application data.
 
 The sheer diversity of devices, protocols, and lack of standardization between device manufacturers makes it difficult to detect all vulnerabilities, or to even identify all of the devices that are connected to a network.
 
-This research suggests that medical IoT device manufacturers are not necessarily aligned with policies including the Privacy and Security rules of HIPAA, and they may inadvertently reveal sensitive data and metadata about a user's behavior and medical condition. For example, the Privacy rule dictates that manufacturers and medical professionals protect personally identifying information such as the individual's past, present or future physical or mental health or condition. Though we found no instances of full names or biologically identifiable information being leaked, in the digital age, policy makers and manufacturers should recognize the importance of encrypting all application data and protecting metadata.
+This research suggests that medical IoT device manufacturers are not necessarily aligned with policies including the Privacy and Security rules of HIPAA, and they may inadvertently reveal sensitive data and metadata about a user's behavior and medical condition. For example, the HIPAA Privacy rule dictates that manufacturers and medical professionals protect personally identifying information, such as the individual's past, present or future physical or mental health or condition. Though we found no instances of full names or biologically identifiable information being leaked, policy makers and manufacturers should recognize the importance of encrypting all application data and protecting metadata.
 
-This research underscores the lack of awareness among the general public when it comes to the confidentiality and integrity of their personal data. As technology becomes increasingly capable and complex, it will only become more difficult for users of connected devices to comprehend what sort of data can be extracted from their digital footprint, even if the devices they are using encrypt first order information. Tools like the user interface presented in this paper are in the public interest to increase the visibility of device vulnerabilities, awareness of personal confidentiality weaknesses, and accountability among device manufacturers.
+This research underscores the lack of awareness among the general public when it comes to the confidentiality and integrity of their personal data. As technology becomes increasingly capable and complex, it will only become more difficult for users of connected devices to comprehend what sort of data can be extracted from their digital footprint, even if the devices they are using encrypt first-order information. Tools like the user interface presented in this paper are in the public interest to increase the visibility of device vulnerabilities, awareness of personal confidentiality weaknesses, and accountability among device manufacturers.
 
 Because the devices examined in this paper are not always on, as in the case
 of some other home IoT devices such as an Amazon Echo or Google Nest
 Thermostat, future research should examine always-on medical IoT devices, such
 as smart glucose pumps. Such devices may have increased demand for security
-and privacy, and additionally make metadata analysis more difficult, since
+and privacy, but may additionally make metadata analysis more difficult, since
 device traffic is not necessarily correlated with user behavior and activity.
 
-While detecting cleartext application-level data is an important first step in understanding
-the severity of medical IoT security and privacy vulnerabilities, it should be considered "low hanging fruit". Frequently, device manufacturers and software engineers will program IoT devices to transmit payloads that have been compressed in an effort to reduce the number of packets transmitted (and not necessarily as a means of obfuscating cleartext traffic). Thus, an extension of our research would include methods of distinguishing compressed traffic from encrypted traffic. Once this has been done, it would be possible to brute force decompression using a list of widely used decompression algorithms and then apply our deep packet inspection methodology on the resulting cleartext. Distinguishing compressed text (which already has a high entropy value) from encrypted text is not something that the Shannon Entropy or Chi Squared tests are particularly accurate at doing, so a more advanced classification technique, perhaps using a machine learning approach, could be employed. 
+While detecting cleartext application-layer data is an important first step in understanding
+the severity of medical IoT security and privacy vulnerabilities, it should be considered "low hanging fruit." Frequently, device manufacturers and software engineers will program IoT devices to transmit payloads that have been compressed in an effort to reduce the number of packets transmitted (and not necessarily as a means of obfuscating cleartext traffic). Thus, an extension of our research would include methods of distinguishing compressed traffic from encrypted traffic. Once this has been done, it would be possible to brute force decompression using a list of widely used decompression algorithms and then apply our deep packet inspection methodology on the resulting cleartext. Distinguishing compressed text (which already has a high entropy value) from encrypted text is not something that the Shannon Entropy or Chi Squared tests are particularly accurate at doing, so a more advanced classification technique, perhaps using a machine learning approach, could be employed. 
 
 \section{Conclusion}
 
-By capturing network traffic from a suite of IoT devices and conducting deep packet inspection, we were able to identify examples of cleartext and metadata leaks that compromise users' privacy. These results reveal multiple known vulnerabilities within IoT devices, but there are heightened implications due to the sensitive nature of the medical metadata being disclosed. Particularly if used by healthcare professionals to measure patient vital signs/data over time, these medical IoT devices need to be more carefully examined by regulators and physician networks to increase the awareness of this information leakage before they are implemented on a wider scale. 
+By capturing network traffic from a suite of IoT devices and conducting deep packet inspection, we were able to identify examples of cleartext and metadata leaks that compromise users' privacy. These results reveal multiple known vulnerabilities within IoT devices, but there are heightened implications due to the sensitive nature of the medical metadata being disclosed. If used by healthcare professionals to measure patient vital signs/data over time, these medical IoT devices need to be more carefully examined by regulators and physician networks to increase the awareness of potential privacy violations before they are adopted on a wider scale. 
 
 \section*{Acknowledgments}
 Thanks to Rohan Doshi, Gudrun Jonsdottir, and Dillon Reisman. This work was partially supported by a Google Faculty Research Award, NSF Awards CNS-1526353 and CNS-1539902, and the Department of Defense through the National Defense Science \& Engineering Graduate Fellowship. 
