@@ -1,10 +1,10 @@
-This is makeindex, version 2.15 [TeX Live 2015] (kpathsea + Thai support).
-Scanning style file /usr/local/texlive/2015/texmf-dist/makeindex/latex/gglo.ist........
-** Input style error (file = /usr/local/texlive/2015/texmf-dist/makeindex/latex/gglo.ist, line = 81):
+This is makeindex, version 2.15 [TeX Live 2014] (kpathsea + Thai support).
+Scanning style file /usr/local/texlive/2014/texmf-dist/makeindex/latex/gglo.ist........
+** Input style error (file = /usr/local/texlive/2014/texmf-dist/makeindex/latex/gglo.ist, line = 76):
    -- Unknown specifier lethead_prefix.
-** Input style error (file = /usr/local/texlive/2015/texmf-dist/makeindex/latex/gglo.ist, line = 82):
+** Input style error (file = /usr/local/texlive/2014/texmf-dist/makeindex/latex/gglo.ist, line = 77):
    -- Unknown specifier lethead_suffix.
-** Input style error (file = /usr/local/texlive/2015/texmf-dist/makeindex/latex/gglo.ist, line = 83):
+** Input style error (file = /usr/local/texlive/2014/texmf-dist/makeindex/latex/gglo.ist, line = 78):
    -- Unknown specifier lethead_flag.
 ......done (14 attributes redefined, 3 ignored).
 Scanning input file acmart.glo....
