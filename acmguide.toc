@@ -1,0 +1,15 @@
+\contentsline {section}{\numberline {1}Introduction}{2}{section.1}
+\contentsline {section}{\numberline {2}User's guide}{2}{section.2}
+\contentsline {subsection}{\numberline {2.1}Installation}{2}{subsection.2.1}
+\contentsline {subsection}{\numberline {2.2}Invocation and options}{4}{subsection.2.2}
+\contentsline {subsection}{\numberline {2.3}Topmatter commands}{6}{subsection.2.3}
+\contentsline {subsection}{\numberline {2.4}Algorithms}{18}{subsection.2.4}
+\contentsline {subsection}{\numberline {2.5}Figures and tables}{18}{subsection.2.5}
+\contentsline {subsection}{\numberline {2.6}Theorems}{20}{subsection.2.6}
+\contentsline {subsection}{\numberline {2.7}Online-only and offline-only material}{20}{subsection.2.7}
+\contentsline {subsection}{\numberline {2.8}Note about anonymous mode}{21}{subsection.2.8}
+\contentsline {subsection}{\numberline {2.9}Acknowledgments}{21}{subsection.2.9}
+\contentsline {subsection}{\numberline {2.10}Bibliography}{22}{subsection.2.10}
+\contentsline {subsection}{\numberline {2.11}Colors}{24}{subsection.2.11}
+\contentsline {subsection}{\numberline {2.12}Other notable packages and typographic remarks}{25}{subsection.2.12}
+\contentsline {subsection}{\numberline {2.13}A note for wizards: \texttt {acmart-preload-hook.tex}}{25}{subsection.2.13}
