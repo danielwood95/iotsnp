@@ -16,8 +16,7 @@ SAMPLES = \
 	sample-sigconf.tex \
 	sample-sigconf-authordraft.tex \
 	sample-sigplan.tex \
-	sample-sigchi.tex \
-	sample-sigchi-a.tex 
+	sample-sigchi.tex 
 
 
 PDF = $(PACKAGE).pdf ${SAMPLES:%.tex=%.pdf} acmguide.pdf
